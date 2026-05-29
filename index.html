@@ -6,495 +6,95 @@
     <meta name="description" content="Alfa Ediciones Libros - Rescatamos, preservamos y publicamos obras valiosas de teología, filosofía, espiritualidad y literatura con cuidado artesanal.">
     <meta name="keywords" content="editorial, libros, teología, filosofía, espiritualidad, literatura clásica, ediciones artesanales">
     <meta name="author" content="Alfa Ediciones Libros">
-    
-    <!-- Open Graph para redes sociales -->
     <meta property="og:title" content="Alfa Ediciones Libros">
     <meta property="og:description" content="El libro como vehículo de cultura, tradición y belleza">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_AR">
-    
     <title>Alfa Ediciones Libros | Cultura, Tradición y Belleza</title>
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --color-primario: #2c3e50;
-            --color-secundario: #8b6f47;
-            --color-acento: #d4a574;
-            --color-fondo: #faf8f5;
-            --color-texto: #333;
-            --color-claro: #fff;
-            --fuente-principal: 'Georgia', 'Times New Roman', serif;
-            --fuente-secundaria: 'Helvetica Neue', Arial, sans-serif;
+            --color-primario: #2c3e50; --color-secundario: #8b6f47; --color-acento: #d4a574;
+            --color-fondo: #faf8f5; --color-texto: #333; --color-claro: #fff;
+            --fuente-principal: 'Georgia', 'Times New Roman', serif; --fuente-secundaria: 'Helvetica Neue', Arial, sans-serif;
         }
-        
-        body {
-            font-family: var(--fuente-secundaria);
-            line-height: 1.6;
-            color: var(--color-texto);
-            background-color: var(--color-fondo);
-        }
-        
-        /* Header y Navegación */
-        header {
-            background-color: var(--color-claro);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: var(--fuente-principal);
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--color-primario);
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-        
-        .logo span {
-            color: var(--color-secundario);
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--color-primario);
-            font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
-        }
-        
-        .nav-links a:hover {
-            color: var(--color-secundario);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--color-acento);
-            transition: width 0.3s;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-        
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--color-primario);
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
-            color: var(--color-claro);
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-family: var(--fuente-principal);
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            font-style: italic;
-            opacity: 0.95;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background-color: var(--color-acento);
-            color: var(--color-claro);
-            text-decoration: none;
-            border-radius: 3px;
-            font-weight: 600;
-            transition: all 0.3s;
-            margin-top: 1rem;
-        }
-        
-        .cta-button:hover {
-            background-color: #c99560;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        /* Secciones generales */
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        section h2 {
-            font-family: var(--fuente-principal);
-            font-size: 2.5rem;
-            color: var(--color-primario);
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-        
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--color-acento);
-        }
-        
-        /* Quiénes somos */
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--color-texto);
-        }
-        
-        .about-content p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
-        }
-        
-        .about-content strong {
-            color: var(--color-secundario);
-        }
-        
-        /* Línea editorial */
-        .editorial {
-            background-color: var(--color-claro);
-        }
-        
-        .editorial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .editorial-card {
-            padding: 2rem;
-            text-align: center;
-            border: 2px solid var(--color-fondo);
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-        
-        .editorial-card:hover {
-            border-color: var(--color-acento);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .editorial-card h3 {
-            font-family: var(--fuente-principal);
-            color: var(--color-primario);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .editorial-card p {
-            color: #666;
-            font-size: 0.95rem;
-        }
-        
-        /* Catálogo */
-        .catalog-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .search-box {
-            max-width: 600px;
-            margin: 2rem auto;
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .search-box input {
-            flex: 1;
-            padding: 0.8rem 1.2rem;
-            border: 2px solid var(--color-fondo);
-            border-radius: 3px;
-            font-size: 1rem;
-        }
-        
-        .search-box input:focus {
-            outline: none;
-            border-color: var(--color-acento);
-        }
-        
-        .search-box button {
-            padding: 0.8rem 1.5rem;
-            background-color: var(--color-primario);
-            color: var(--color-claro);
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        
-        .search-box button:hover {
-            background-color: var(--color-secundario);
-        }
-        
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-        
-        .book-card {
-            background: var(--color-claro);
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .book-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        
-        .book-cover {
-            width: 100%;
-            height: 380px;
-            object-fit: contain;
-            background-color: #f5f5f5;
-            padding: 1rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .book-info {
-            padding: 1.5rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .book-title {
-            font-family: var(--fuente-principal);
-            font-size: 1.2rem;
-            color: var(--color-primario);
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-        }
-        
-        .book-author {
-            color: var(--color-secundario);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-        }
-        
-        .book-desc {
-            font-size: 0.9rem;
-            color: #555;
-            margin-bottom: 1rem;
-            flex: 1;
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .book-specs {
-            font-size: 0.85rem;
-            color: #777;
-            margin-bottom: 1rem;
-            border-top: 1px solid #eee;
-            padding-top: 1rem;
-        }
-        
-        .book-specs span {
-            margin-right: 1rem;
-        }
-        
-        .buy-button {
-            display: inline-block;
-            width: 100%;
-            padding: 0.8rem;
-            background-color: var(--color-primario);
-            color: var(--color-claro);
-            text-align: center;
-            text-decoration: none;
-            border-radius: 3px;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        
-        .buy-button:hover {
-            background-color: var(--color-secundario);
-        }
-        
-        .buy-button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-        
-        /* Contacto */
-        .contact {
-            text-align: center;
-        }
-        
-        .contact-info {
-            margin-top: 2rem;
-            font-size: 1.2rem;
-        }
-        
-        .contact-info p {
-            margin: 1rem 0;
-        }
-        
-        .contact-info a {
-            color: var(--color-secundario);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        
-        .contact-info a:hover {
-            color: var(--color-acento);
-        }
-        
-        .social-links {
-            margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            background-color: var(--color-primario);
-            color: var(--color-claro);
-            text-decoration: none;
-            border-radius: 3px;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--color-secundario);
-            transform: translateY(-2px);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--color-primario);
-            color: var(--color-claro);
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-        }
-        
-        footer p {
-            opacity: 0.9;
-        }
-        
-        /* Responsive */
+        body { font-family: var(--fuente-secundaria); line-height: 1.6; color: var(--color-texto); background-color: var(--color-fondo); }
+        header { background-color: var(--color-claro); box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--fuente-principal); font-size: 1.8rem; font-weight: bold; color: var(--color-primario); text-decoration: none; letter-spacing: 1px; }
+        .logo span { color: var(--color-secundario); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--color-primario); font-weight: 500; transition: color 0.3s; position: relative; }
+        .nav-links a:hover { color: var(--color-secundario); }
+        .nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background-color: var(--color-acento); transition: width 0.3s; }
+        .nav-links a:hover::after { width: 100%; }
+        .menu-toggle { display: none; flex-direction: column; cursor: pointer; }
+        .menu-toggle span { width: 25px; height: 3px; background-color: var(--color-primario); margin: 3px 0; transition: 0.3s; }
+        .hero { background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%); color: var(--color-claro); padding: 6rem 2rem; text-align: center; }
+        .hero h1 { font-family: var(--fuente-principal); font-size: 3rem; margin-bottom: 1rem; font-weight: 400; letter-spacing: 2px; }
+        .hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 2rem; font-style: italic; opacity: 0.95; }
+        .cta-button { display: inline-block; padding: 1rem 2.5rem; background-color: var(--color-acento); color: var(--color-claro); text-decoration: none; border-radius: 3px; font-weight: 600; transition: all 0.3s; margin-top: 1rem; }
+        .cta-button:hover { background-color: #c99560; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        section h2 { font-family: var(--fuente-principal); font-size: 2.5rem; color: var(--color-primario); margin-bottom: 2rem; text-align: center; position: relative; padding-bottom: 1rem; }
+        section h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: var(--color-acento); }
+        .about-content { max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; }
+        .about-content p { margin-bottom: 1.5rem; text-align: justify; }
+        .about-content strong { color: var(--color-secundario); }
+        .editorial { background-color: var(--color-claro); }
+        .editorial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .editorial-card { padding: 2rem; text-align: center; border: 2px solid var(--color-fondo); border-radius: 5px; transition: all 0.3s; }
+        .editorial-card:hover { border-color: var(--color-acento); transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .editorial-card h3 { font-family: var(--fuente-principal); color: var(--color-primario); margin-bottom: 1rem; font-size: 1.5rem; }
+        .editorial-card p { color: #666; font-size: 0.95rem; }
+        .catalog-header { text-align: center; margin-bottom: 3rem; }
+        .search-box { max-width: 600px; margin: 2rem auto; display: flex; gap: 0.5rem; }
+        .search-box input { flex: 1; padding: 0.8rem 1.2rem; border: 2px solid var(--color-fondo); border-radius: 3px; font-size: 1rem; }
+        .search-box input:focus { outline: none; border-color: var(--color-acento); }
+        .search-box button { padding: 0.8rem 1.5rem; background-color: var(--color-primario); color: var(--color-claro); border: none; border-radius: 3px; cursor: pointer; font-weight: 600; transition: background 0.3s; }
+        .search-box button:hover { background-color: var(--color-secundario); }
+        .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
+        .book-card { background: var(--color-claro); border-radius: 5px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .book-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+        .book-cover { width: 100%; height: 380px; object-fit: contain; background-color: #f5f5f5; padding: 1rem; border-bottom: 1px solid #eee; }
+        .book-info { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+        .book-title { font-family: var(--fuente-principal); font-size: 1.2rem; color: var(--color-primario); margin-bottom: 0.5rem; line-height: 1.3; }
+        .book-author { color: var(--color-secundario); font-weight: 600; margin-bottom: 1rem; font-size: 0.95rem; }
+        .book-desc { font-size: 0.9rem; color: #555; margin-bottom: 1rem; flex: 1; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+        .book-specs { font-size: 0.85rem; color: #777; margin-bottom: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
+        .book-specs span { margin-right: 1rem; }
+        .buy-buttons { display: flex; flex-direction: column; gap: 0.5rem; }
+        .buy-button { display: inline-block; width: 100%; padding: 0.8rem; background-color: var(--color-primario); color: var(--color-claro); text-align: center; text-decoration: none; border-radius: 3px; font-weight: 600; transition: background 0.3s; }
+        .buy-button:hover { background-color: var(--color-secundario); }
+        .buy-button:disabled { background-color: #ccc; cursor: not-allowed; }
+        .buy-button.secondary { background-color: var(--color-secundario); }
+        .buy-button.secondary:hover { background-color: #7a5f3d; }
+        .edition-note { font-size: 0.8rem; color: #666; font-style: italic; margin-bottom: 0.5rem; }
+        .plan-b-section { background-color: #f0ebe5; border-top: 3px dashed var(--color-acento); }
+        .plan-b-badge { display: inline-block; background-color: var(--color-acento); color: var(--color-claro); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
+        .contact { text-align: center; }
+        .contact-info { margin-top: 2rem; font-size: 1.2rem; }
+        .contact-info p { margin: 1rem 0; }
+        .contact-info a { color: var(--color-secundario); text-decoration: none; font-weight: 600; transition: color 0.3s; }
+        .contact-info a:hover { color: var(--color-acento); }
+        .social-links { margin-top: 2rem; display: flex; justify-content: center; gap: 2rem; }
+        .social-links a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background-color: var(--color-primario); color: var(--color-claro); text-decoration: none; border-radius: 3px; transition: all 0.3s; }
+        .social-links a:hover { background-color: var(--color-secundario); transform: translateY(-2px); }
+        footer { background-color: var(--color-primario); color: var(--color-claro); text-align: center; padding: 2rem; font-size: 0.9rem; }
+        footer p { opacity: 0.9; }
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--color-claro);
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
-            .menu-toggle {
-                display: flex;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            section h2 {
-                font-size: 2rem;
-            }
-            
-            .editorial-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .books-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .search-box {
-                flex-direction: column;
-            }
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background-color: var(--color-claro); flex-direction: column; padding: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: flex; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.1rem; }
+            section h2 { font-size: 2rem; }
+            .editorial-grid, .books-grid { grid-template-columns: 1fr; }
+            .search-box { flex-direction: column; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav>
             <a href="#" class="logo">Alfa <span>Ediciones</span> Libros</a>
@@ -503,80 +103,43 @@
                 <li><a href="#quienes-somos">Quiénes somos</a></li>
                 <li><a href="#linea-editorial">Línea editorial</a></li>
                 <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#plan-b">Infantiles</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="inicio">
         <h1>Alfa Ediciones Libros</h1>
         <p>"El libro como vehículo de cultura, tradición y belleza"</p>
         <a href="#catalogo" class="cta-button">Ver catálogo</a>
     </section>
 
-    <!-- Quiénes somos -->
     <section id="quienes-somos">
         <h2>Quiénes somos</h2>
         <div class="about-content">
-            <p>
-                <strong>Alfa Ediciones Libros</strong> nació en el corazón de nuestra vida familiar.
-            </p>
-            <p>
-                Somos <strong>Inés de Elías y Alfonso Roqué</strong>, y desde nuestro hogar trabajamos juntos en el oficio editorial: Alfonso en la edición, corrección, maquetación y cuidado de los textos; Inés en el diseño y la identidad visual de cada libro. Entre ambos damos forma a obras realizadas con atención artesanal, amor por la belleza y compromiso con la calidad.
-            </p>
-            <p>
-                Tenemos siete hijos, y nuestra vida cotidiana transcurre entre libros y familia, entre manuscritos, juegos, meriendas y tareas domésticas. Elegimos trabajar en casa para poder vivir el trabajo y la crianza con presencia activa, haciendo lugar tanto a las necesidades de nuestros hijos como a las de cada obra que llega a nuestras manos.
-            </p>
-            <p>
-                Así, en medio de mamaderas, problemas de matemática, bizcochuelos y rompecabezas, convivimos también con párrafos de autores contemporáneos que desean ver nacer sus libros, y con palabras rescatadas de viejas ediciones casi olvidadas, obras valiosas que buscamos devolver a los lectores.
-            </p>
-            <p>
-                Creemos profundamente en el libro como transmisor de cultura, tradición y belleza. Por eso trabajamos para que cada edición llegue a las manos de familias y lectores que todavía buscan historias verdaderas, ideas que iluminen y libros capaces de dejar huella para siempre.
-            </p>
+            <p><strong>Alfa Ediciones Libros</strong> nació en el corazón de nuestra vida familiar.</p>
+            <p>Somos <strong>Inés de Elías y Alfonso Roqué</strong>, y desde nuestro hogar trabajamos juntos en el oficio editorial: Alfonso en la edición, corrección, maquetación y cuidado de los textos; Inés en el diseño y la identidad visual de cada libro. Entre ambos damos forma a obras realizadas con atención artesanal, amor por la belleza y compromiso con la calidad.</p>
+            <p>Tenemos siete hijos, y nuestra vida cotidiana transcurre entre libros y familia, entre manuscritos, juegos, meriendas y tareas domésticas. Elegimos trabajar en casa para poder vivir el trabajo y la crianza con presencia activa, haciendo lugar tanto a las necesidades de nuestros hijos como a las de cada obra que llega a nuestras manos.</p>
+            <p>Así, en medio de mamaderas, problemas de matemática, bizcochuelos y rompecabezas, convivimos también con párrafos de autores contemporáneos que desean ver nacer sus libros, y con palabras rescatadas de viejas ediciones casi olvidadas, obras valiosas que buscamos devolver a los lectores.</p>
+            <p>Creemos profundamente en el libro como transmisor de cultura, tradición y belleza. Por eso trabajamos para que cada edición llegue a las manos de familias y lectores que todavía buscan historias verdaderas, ideas que iluminen y libros capaces de dejar huella para siempre.</p>
         </div>
     </section>
 
-    <!-- Línea editorial -->
     <section id="linea-editorial" class="editorial">
         <h2>Línea editorial</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
-            Nuestra línea editorial busca rescatar, preservar y devolver a los lectores obras valiosas que muchas veces han desaparecido de las librerías o permanecen relegadas al olvido.
-        </p>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">Nuestra línea editorial busca rescatar, preservar y devolver a los lectores obras valiosas que muchas veces han desaparecido de las librerías o permanecen relegadas al olvido.</p>
         <div class="editorial-grid">
-            <div class="editorial-card">
-                <h3>Teología</h3>
-                <p>Obras fundamentales para el estudio y la reflexión teológica</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Filosofía</h3>
-                <p>Textos clásicos y contemporáneos de pensamiento filosófico</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Espiritualidad</h3>
-                <p>Libros que nutren el alma y acompañan el camino interior</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Humanidades</h3>
-                <p>Estudios profundos sobre el ser humano y su cultura</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Literatura</h3>
-                <p>Narrativa y poesía de autores reconocidos y de sólida trayectoria</p>
-            </div>
-            <div class="editorial-card">
-                <h3>Obras rescatadas</h3>
-                <p>Nuevas ediciones de textos valiosos casi olvidados</p>
-            </div>
+            <div class="editorial-card"><h3>Teología</h3><p>Obras fundamentales para el estudio y la reflexión teológica</p></div>
+            <div class="editorial-card"><h3>Filosofía</h3><p>Textos clásicos y contemporáneos de pensamiento filosófico</p></div>
+            <div class="editorial-card"><h3>Espiritualidad</h3><p>Libros que nutren el alma y acompañan el camino interior</p></div>
+            <div class="editorial-card"><h3>Humanidades</h3><p>Estudios profundos sobre el ser humano y su cultura</p></div>
+            <div class="editorial-card"><h3>Literatura</h3><p>Narrativa y poesía de autores reconocidos y de sólida trayectoria</p></div>
+            <div class="editorial-card"><h3>Obras rescatadas</h3><p>Nuevas ediciones de textos valiosos casi olvidados</p></div>
         </div>
     </section>
 
-    <!-- Catálogo -->
     <section id="catalogo">
         <h2>Nuestro Catálogo</h2>
         <div class="catalog-header">
@@ -586,325 +149,177 @@
                 <button onclick="filterBooks()">Buscar</button>
             </div>
         </div>
-        <div class="books-grid" id="booksGrid">
-            <!-- Los libros se generan con JavaScript -->
-        </div>
+        <div class="books-grid" id="booksGrid"></div>
     </section>
 
-    <!-- Contacto -->
+    <section id="plan-b" class="plan-b-section">
+        <h2><span class="plan-b-badge">Infantiles</span> Colección Plan B</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">Libros especialmente seleccionados para los más pequeños, con valores, belleza y diversión.</p>
+        <div class="books-grid" id="planBGrid"></div>
+    </section>
+
     <section id="contacto" class="contact">
         <h2>Contacto</h2>
-        <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-            ¿Tenés consultas o querés conocer nuestro catálogo? Escribinos
-        </p>
-        <div class="contact-info">
-            <p>📧 <a href="mailto:alfa.ediciones.libros@gmail.com">alfa.ediciones.libros@gmail.com</a></p>
-        </div>
-        <div class="social-links">
-            <a href="https://instagram.com/alfa.ediciones.libros" target="_blank" rel="noopener noreferrer">
-                <span>📷</span> Seguirnos en Instagram
-            </a>
-        </div>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">¿Tenés consultas o querés conocer nuestro catálogo? Escribinos</p>
+        <div class="contact-info"><p>📧 <a href="mailto:alfa.ediciones.libros@gmail.com">alfa.ediciones.libros@gmail.com</a></p></div>
+        <div class="social-links"><a href="https://instagram.com/alfa.ediciones.libros" target="_blank" rel="noopener noreferrer"><span>📷</span> Seguirnos en Instagram</a></div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Alfa Ediciones Libros. Todos los derechos reservados.</p>
         <p style="margin-top: 0.5rem; font-size: 0.85rem;">Hecho con amor en familia</p>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Datos de los libros
+        /* 
+         * ============================================================
+         * CATÁLOGO PRINCIPAL - Numeración interna para edición
+         * ============================================================
+         * 1. Santa Germana Cousin
+         * 2. ¿Estamos de acuerdo? (Chesterton/Shaw)
+         * 3. Nuevos Cuentos de Hadas (Condesa de Ségur) - 2 versiones
+         * 4. Realismo Tomista y Crítica del Conocimiento
+         * 5. Por qué Santo Tomás criticó a San Agustín
+         * 6. Razón y revelación en la Edad Media
+         * 7. Introducción al Estudio de San Agustín
+         * 8. La Teología Mística de San Bernardo
+         * 9. Similitudes entre el Santo Patriarca José...
+         * 10. La Armonía entre la Iglesia y la Sinagoga (Vol. I y II)
+         * 11. Las cartas de Goldstein
+         * 12. La Iglesia, sus ritos y oficios
+         * 13. C.S. Lewis, una aproximación
+         * 14. Mater Dolorosa
+         * 15. Tratado de la verdadera devoción a la Santísima Virgen
+         * 16. Cuaderno de notas personales. Pensamientos espirituales
+         * 17. Efemérides: dramatización de fiestas religiosas y fiestas patrias
+         * 18. El Divino Ignorado
+         * 19. Principios de sanidad
+         * 20. El amor de la Sabiduría Eterna
+         * 21. La canción del cisne
+         * 22. El tesoro escondido de la Santa Misa
+         * 23. Mi libro para colorear rezando a la Virgen María
+         * 24. Camperas: Bichos y personas
+         * 25. Su Majestad Dulcinea
+         * 26. Evangelio de la infancia espiritual
+         * 27. Justo Mercado
+         * 28. Bloy & Claudel: Dos novelas
+         * 29. La Niña del calvero: El poder de las palabras
+         * 30. Glorias y virtudes de San José
+         * 31. El príncipe de este mundo
+         * 32. La Búsqueda del Santo Grial - 2 versiones
+         * 33. El Sueño de Helena
+         */
+
         const books = [
-            {
-                title: "Santa Germana Cousin",
-                author: "Louis Veuillot",
-                desc: "En los últimos veinte años del siglo XVII vivía una pobre y enferma campesina, una pastorcita cuyo rostro y nombre apenas eran conocidos por los habitantes de su pueblo...",
-                size: "15x21", pages: 166,
-                image: "https://m.media-amazon.com/images/I/41h8LMOY-8L._SY445_SX342_FMwebp_.jpg",
-                link: "https://amzn.to/4qNchao"
-            },
-            {
-                title: "¿Estamos de acuerdo?: Un debate entre G. K. Chesterton y G. B. Shaw",
-                author: "G. K. Chesterton y G. B. Shaw",
-                desc: "Edición bilingüe de un magnífico debate sobre la licitud de la propiedad privada entre dos grandes amigos...",
-                size: "12x19", pages: 88,
-                image: "https://m.media-amazon.com/images/I/41uelM9UoCL._SY445_SX342_FMwebp_.jpg",
-                link: "https://amzn.to/4kNZl2J"
-            },
-            {
-                title: "Nuevos Cuentos de Hadas: Edición con ilustración a color",
-                author: "Condesa de Ségur",
-                desc: "La Condesa de Ségur, cuyo verdadero nombre era Sofía Fiódorovna Rostopchiná, nació el 1 de agosto de 1799...",
-                size: "15x21", pages: 162,
-                image: "https://m.media-amazon.com/images/I/51SV6282fdL._SY445_SX342_FMwebp_.jpg",
-                link: "https://amzn.to/4ay3Jzy"
-            },
-            {
-                title: "Realismo Tomista y Crítica del Conocimiento",
-                author: "Étienne Gilson",
-                desc: "El mismo Gilson nos da la clave de lo experimentado cuando nos recuerda que de un libro se aprende...",
-                size: "15x21", pages: 212,
-                image: "https://m.media-amazon.com/images/I/51suj0IAH9L._SY445_SX342_FMwebp_.jpg",
-                link: "https://amzn.to/4aIE2uF"
-            },
-            {
-                title: "Similitudes entre el Santo Patriarca José, hijo de Jacob, y Nuestro Señor Jesucristo",
-                author: "P. Louis Hilaire Caron",
-                desc: "... si un pintor hubiera representado, diecisiete siglos antes de la era cristiana, en un cuadro lleno de similitudes...",
-                size: "15x21", pages: 194,
-                image: "https://m.media-amazon.com/images/I/41vJMUlDTZL._SY445_SX342_FMwebp_.jpg",
-                link: "https://amzn.to/3MRQ0KJ"
-            },
-            {
-                title: "Introducción al Estudio de San Agustín",
-                author: "Étienne Gilson",
-                desc: "Los lectores de habla hispana asiduos de Gilson teníamos una deuda para con esta obra...",
-                size: "15x21", pages: 538,
-                image: "https://m.media-amazon.com/images/I/41Xpj34BXwL._SY445_SX342_FMwebp_.jpg",
-                link: "https://amzn.to/4s4s6uq"
-            },
-            {
-                title: "La Armonía entre la Iglesia y la Sinagoga: La perpetuidad y Catolicidad de la Religión Cristiana, vol. I",
-                author: "Paul Bernard Drach",
-                desc: "La Armonía entre la Iglesia y la Sinagoga, traducido por primera vez al español, es una verdadera obra maestra...",
-                size: "15x21", pages: 510,
-                image: "https://m.media-amazon.com/images/I/51qdQTEFXZL._SY445_SX342_ML2_.jpg",
-                link: "https://amzn.to/4kP7bZL"
-            },
-            {
-                title: "La Armonía entre la Iglesia y la Sinagoga: La perpetuidad y Catolicidad de la Religión Cristiana, vol. II",
-                author: "Paul Bernard Drach",
-                desc: "La Armonía entre la Iglesia y la Sinagoga, traducido por primera vez al español, es una verdadera obra maestra...",
-                size: "15x21", pages: 448,
-                image: "https://m.media-amazon.com/images/I/51jxpxz+3UL._SY445_SX342_FMwebp_.jpg",
-                link: "https://amzn.to/3ZQzT2T"
-            },
-            {
-                title: "La Teología Mística de San Bernardo",
-                author: "Étienne Gilson",
-                desc: "Este libro constituye una recuperación de San Bernardo como místico y teólogo a la vez...",
-                size: "16x22", pages: 318,
-                image: "https://m.media-amazon.com/images/I/41XakerZtlL._SY445_SX342_FMwebp_.jpg",
-                link: "https://amzn.to/4b2lKWK"
-            },
-            {
-                title: "Las cartas de Goldstein: La garantía para que los hijos de Israel se conviertan en hijos adoptivos de Cristo en su Iglesia",
-                author: "David Goldstein",
-                desc: "Mi Columna en el Boston Pilot, presentada aquí, contiene algunos de los artículos que tratan sobre principios...",
-                size: "15x21", pages: 466,
-                image: "https://m.media-amazon.com/images/I/51Lzn79K4PL._SY445_SX342_FMwebp_.jpg",
-                link: "https://amzn.to/3MBcYpq"
-            },
-            {
-                title: "La Iglesia, sus ritos y oficios",
-                author: "P. James Meagher D.D.",
-                desc: "Entre los objetos más impresionantes, notables y sublimes del mundo de hoy, se encuentran los Ritos...",
-                size: "15x21", pages: 392,
-                image: "https://m.media-amazon.com/images/I/51GVlBKD4xL._SY385_.jpg",
-                link: "https://amzn.to/3NlKOz4"
-            },
-            {
-                title: "C.S. Lewis, una aproximación",
-                author: "Jorge N. Ferro",
-                desc: "El cumplimiento de todos nuestros anhelos, la consumación de nuestras esperanzas, más allá de lo que podemos llegar siquiera a soñar...",
-                size: "11x18", pages: 166,
-                image: "https://m.media-amazon.com/images/I/61oNS25xgcL._SY466_.jpg",
-                link: "https://amzn.to/4u3p0aG"
-            },
-            {
-                title: "Mater Dolorosa, extracto de las Glorias a María",
-                author: "San Alfonso María de Ligorio",
-                desc: "Una obra entrañable de la tradición espiritual, este extracto de Las glorias de María...",
-                size: "11x18", pages: 96,
-                image: "https://m.media-amazon.com/images/I/61Bkypxf-mL._SY466_.jpg",
-                link: "https://amzn.to/43CXzcS"
-            },
-            {
-                title: "Tratado de la verdadera devoción a la Santísima Virgen",
-                author: "San Luis María Grignion de Montfort",
-                desc: "Un clásico de la espiritualidad cristiana, el Tratado de la verdadera devoción...",
-                size: "11x18", pages: 218,
-                image: "https://m.media-amazon.com/images/I/61L9wtE1WIL._SY466_.jpg",
-                link: ""
-            },
-            {
-                title: "Cuaderno de notas personales. Pensamientos espirituales",
-                author: "Santa Bernardita Soubirous",
-                desc: "Basado en sus propios cuadernos y notas espirituales, este libro recoge la voz íntima de Bernadette Soubirous...",
-                size: "11x18", pages: 72,
-                image: "https://m.media-amazon.com/images/I/61kKNdWLPNL._SY522_.jpg",
-                link: "https://amzn.to/3PQaDs3"
-            },
-            {
-                title: "Efemérides: dramatización de fiestas religiosas y fiestas patrias",
-                author: "Athanasius",
-                desc: "Efemérides: Sucesos notables ocurridos en la fecha, pero en años anteriores...",
-                size: "15x21", pages: 208,
-                image: "https://m.media-amazon.com/images/I/71Eafe-rzIL._SY425_.jpg",
-                link: "https://amzn.to/436TQ7h"
-            },
-            {
-                title: "El Divino Ignorado",
-                author: "Mons Maurice Landrieux",
-                desc: "Mons. Landrieux ofrece en El Divino Ignorado una profunda meditación sobre la Persona y la acción del Espíritu Santo...",
-                size: "15x21", pages: 130,
-                image: "https://m.media-amazon.com/images/I/61PbzFtHM0L._SY425_.jpg",
-                link: "https://amzn.to/3RRTNtv"
-            },
-            {
-                title: "El amor de la Sabiduría Eterna",
-                author: "San Luis María Grignion de Montfort",
-                desc: "Este libro presenta el contexto fundamental de los demás escritos de San Luis María Grignion de Montfort...",
-                size: "11x18", pages: 178,
-                image: "https://m.media-amazon.com/images/I/61IW+wzoiRL._SY522_.jpg",
-                link: "https://amzn.to/4vflhb1"
-            },
-            {
-                title: "Razón y revelación en la Edad Media",
-                author: "Étienne Gilson",
-                desc: "Lo que Gilson describe en estas reflexiones históricas sigue apareciendo hoy, no sólo en el ámbito académico...",
-                size: "15x21", pages: 76,
-                image: "https://m.media-amazon.com/images/I/71V+UXT25RL._SY385_.jpg",
-                link: "https://amzn.to/4o083wr"
-            },
-            {
-                title: "La canción del cisne",
-                author: "Fernando Zwanik",
-                desc: "Escrita bajo la figura literaria de una crónica historiográfica, La Canción del Cisne cuenta la paciente maduración de un alma...",
-                size: "15x21", pages: 400,
-                image: "https://m.media-amazon.com/images/I/61OUB5zYPdL._SY425_.jpg",
-                link: "https://amzn.to/4wXR16c"
-            },
-            {
-                title: "El tesoro escondido de la Santa Misa",
-                author: "San Leonardo de Porto Maurizio",
-                desc: "¿Te admirarás acaso al oírme decir que la Santa Misa es una obra asombrosa?...",
-                size: "11x18", pages: 122,
-                image: "https://m.media-amazon.com/images/I/619E5gjabQL._SY466_.jpg",
-                link: ""
-            },
-            {
-                title: "Mi libro para colorear rezando a la Virgen María",
-                author: "Inés María de Elías Quadri",
-                desc: "En Mi libro para colorear rezando a la Virgen María encontrarás una colección de imágenes, devociones y poesías...",
-                size: "21x29", pages: 24,
-                image: "https://m.media-amazon.com/images/I/71pVeK6wCYL._SY425_.jpg",
-                link: "https://amzn.to/4dS4VOv"
-            },
-            {
-                title: "Camperas: Bichos y personas",
-                author: "P. Leonardo Castellani",
-                desc: "Un libro no se debe hacer sino cuando uno ha concebido allá dentro un concepto vivo...",
-                size: "15x21", pages: 250,
-                image: "https://m.media-amazon.com/images/I/51GVlBKD4xL._SY385_.jpg",
-                link: ""
-            },
-            {
-                title: "Su Majestad Dulcinea",
-                author: "P. Leonardo Castellani",
-                desc: "El que ha de venir vendrá y no tardará. Estamos defendiendo millares de hogares como el que fue nuestro...",
-                size: "15x21", pages: 382,
-                image: "https://m.media-amazon.com/images/I/61WA7KUEgmL._SY425_.jpg",
-                link: "https://amzn.to/4wX27Z2"
-            },
-            {
-                title: "Tom Playfair",
-                author: "Francis Finn",
-                desc: "Tom Playfair es inquieto, travieso y siempre dispuesto a vivir algo nuevo...",
-                size: "15x21", pages: 160,
-                image: "https://m.media-amazon.com/images/I/71b+IZf0kNL._SY425_.jpg",
-                link: ""
-            },
-            {
-                title: "Percy Winn",
-                author: "Francis Finn",
-                desc: "Percy Wynn es un joven educado en casa, de modales impecables pero sin experiencia en el trato con otros muchachos...",
-                size: "15x21", pages: 168,
-                image: "https://m.media-amazon.com/images/I/51OUPezSRsL._SY445_SX342_FMwebp_.jpg",
-                link: ""
-            },
-            {
-                title: "Henry Dy",
-                author: "Francis Finn",
-                desc: "Henry Dy es inteligente y de buen corazón, pero su vida cambia radicalmente cuando se ve envuelto en misterios...",
-                size: "15x21", pages: 196,
-                image: "https://m.media-amazon.com/images/I/51rkbdRpW2L._SY445_SX342_FMwebp_.jpg",
-                link: ""
-            },
-            {
-                title: "Evangelio de la infancia espiritual",
-                author: "Esteban Piat O.F.M.",
-                desc: "Esta es una invitación íntima a vivir el Evangelio desde la sencillez y la confianza de Santa Teresita del Niño Jesús...",
-                size: "15x21", pages: 210,
-                image: "https://m.media-amazon.com/images/I/71HaIoQGf8L._SY425_.jpg",
-                link: "https://amzn.to/4u1jBRe"
-            },
-            {
-                title: "Justo Mercado",
-                author: "Diego de Jesús",
-                desc: "Avisar que esta novela es absolutamente ficticia puede parecer innecesario, pero no lo es...",
-                size: "12x19", pages: 272,
-                image: "https://m.media-amazon.com/images/I/71uaYNoFIWL._SY425_.jpg",
-                link: ""
-            },
-            {
-                title: "Bloy & Claudel: Dos novelas",
-                author: "Diego de Jesús",
-                desc: "Hay autores que hacen bien con sus textos; que hace bien leerlos...",
-                size: "15x22", pages: 126,
-                image: "https://m.media-amazon.com/images/I/61Y+XsC8RoL._SY466_.jpg",
-                link: ""
-            },
-            {
-                title: "La Niña del calvero: El poder de las palabras",
-                author: "Diego de Jesús",
-                desc: "Una viajera querubínica. Una palabra puede matar y una palabra puede curar...",
-                size: "12x19", pages: 116,
-                image: "https://m.media-amazon.com/images/I/714Catf3xIL._SY522_.jpg",
-                link: "https://amzn.to/4uOxWlp"
-            },
-            {
-                title: "La verdadera historia del Ratón Pérez",
-                author: "P. Luis Coloma",
-                desc: "La verdadera historia del Ratón Pérez es un libro infantil escrito por el padre Luis Coloma en 1894...",
-                size: "14x20", pages: 46,
-                image: "https://m.media-amazon.com/images/I/71E5iWqEkWL._SY385_.jpg",
-                link: ""
-            },
-            {
-                title: "Glorias y virtudes de San José. Meditaciones para todo el mes de marzo y para todos los miércoles del año",
-                author: "P. Jean Joseph Huguet S.M.",
-                desc: "La misma devoción que inspiró a los fieles a consagrar un mes a honrar al Sagrado Corazón de Jesús...",
-                size: "15x21", pages: 288,
-                image: "https://m.media-amazon.com/images/I/71dv7nByp7L._SY385_.jpg",
-                link: "https://amzn.to/4vBTzFN"
-            },
-            {
-                title: "El príncipe de este mundo",
-                author: "José León Pagano (h)",
-                desc: "El príncipe de este mundo, de José León Pagano (h), es una novela que combina el género policial con una profunda dimensión esjatológica...",
-                size: "15x21", pages: 380,
-                image: "https://m.media-amazon.com/images/I/615yahdm1aL._SY385_.jpg",
-                link: "https://amzn.to/4dCIbmP"
-            },
-            {
-                title: "El Sueño de Helena",
-                author: "Daniel Heredia",
-                desc: "El Sueño de Helena, de Javier Daniel Heredia, es una novela que se inscribe en la tradición de las novelas anticipatorias...",
-                size: "15x21", pages: 160,
-                image: "https://m.media-amazon.com/images/I/61i42pLzB2L._SY385_.jpg",
-                link: "https://amzn.to/49pBi5N"
-            }
+            // 1
+            { title: "Santa Germana Cousin", author: "Louis Veuillot", desc: "En los últimos veinte años del siglo XVII vivía una pobre y enferma campesina, una pastorcita cuyo rostro y nombre apenas eran conocidos por los habitantes de su pueblo...", size: "15x21", pages: 166, image: "https://m.media-amazon.com/images/I/41h8LMOY-8L._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/4qNchao", link2: "" },
+            // 2
+            { title: "¿Estamos de acuerdo?: Un debate entre G. K. Chesterton y G. B. Shaw", author: "G. K. Chesterton y G. B. Shaw", desc: "Edición bilingüe de un magnífico debate sobre la licitud de la propiedad privada entre dos grandes amigos...", size: "12x19", pages: 88, image: "https://m.media-amazon.com/images/I/41uelM9UoCL._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/4kNZl2J", link2: "" },
+            // 3 - Nuevos Cuentos de Hadas (2 versiones)
+            { title: "Nuevos Cuentos de Hadas", author: "Condesa de Ségur", desc: "La Condesa de Ségur, cuyo verdadero nombre era Sofía Fiódorovna Rostopchiná, nació el 1 de agosto de 1799... Incluye: Historia de Blondine, Bonne-Biche y Beau-Minon; El pequeño buen Enrique; Historia de la princesa Rosette; El pequeño ratón gris; Ourson.", size: "15x21", pages: 162, image: "https://m.media-amazon.com/images/I/51SV6282fdL._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/4ay3Jzy", link2: "https://amzn.to/4tNboBh", editionNote: "Disponible con ilustraciones a color y en blanco y negro" },
+            // 4
+            { title: "Realismo Tomista y Crítica del Conocimiento", author: "Étienne Gilson", desc: "El mismo Gilson nos da la clave de lo experimentado cuando nos recuerda que de un libro se aprende...", size: "15x21", pages: 212, image: "https://m.media-amazon.com/images/I/51suj0IAH9L._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/4aIE2uF", link2: "" },
+            // 5
+            { title: "Por qué Santo Tomás criticó a San Agustín", author: "Étienne Gilson", desc: "Para Gilson, en el tratamiento del problema del conocimiento, se registra, por parte de los pensadores del siglo XIII, la revolución acaecida en el ámbito de la filosofía...", size: "15x21", pages: 204, image: "https://m.media-amazon.com/images/I/41+-KwH0m7L._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/4s5Ssw9", link2: "" },
+            // 6
+            { title: "Razón y revelación en la Edad Media", author: "Étienne Gilson", desc: "Lo que Gilson describe en estas reflexiones históricas sigue apareciendo hoy, no sólo en el ámbito académico...", size: "15x21", pages: 76, image: "https://m.media-amazon.com/images/I/71V+UXT25RL._SY385_.jpg", link: "https://amzn.to/4o083wr", link2: "" },
+            // 7
+            { title: "Introducción al Estudio de San Agustín", author: "Étienne Gilson", desc: "Los lectores de habla hispana asiduos de Gilson teníamos una deuda para con esta obra...", size: "15x21", pages: 538, image: "https://m.media-amazon.com/images/I/41Xpj34BXwL._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/4s4s6uq", link2: "" },
+            // 8
+            { title: "La Teología Mística de San Bernardo", author: "Étienne Gilson", desc: "Este libro constituye una recuperación de San Bernardo como místico y teólogo a la vez...", size: "16x22", pages: 318, image: "https://m.media-amazon.com/images/I/41XakerZtlL._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/4b2lKWK", link2: "" },
+            // 9
+            { title: "Similitudes entre el Santo Patriarca José, hijo de Jacob, y Nuestro Señor Jesucristo", author: "P. Louis Hilaire Caron", desc: "... si un pintor hubiera representado, diecisiete siglos antes de la era cristiana, en un cuadro lleno de similitudes...", size: "15x21", pages: 194, image: "https://m.media-amazon.com/images/I/41vJMUlDTZL._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/3MRQ0KJ", link2: "" },
+            // 10 - La Armonía (2 volúmenes)
+            { title: "La Armonía entre la Iglesia y la Sinagoga", author: "Paul Bernard Drach", desc: "Traducido por primera vez al español, es una verdadera obra maestra escrita por Paul Louis Bernard Drach (1791-1868), Rabino converso nacido en Francia. Prueba que los judíos siempre conocieron y creyeron, sobre todo por tradición, los dos principales dogmas del catolicismo: la Santísima Trinidad y la Encarnación del Verbo.", size: "15x21", pages: "Vol. I: 510 págs. | Vol. II: 448 págs.", image: "https://m.media-amazon.com/images/I/51qdQTEFXZL._SY445_SX342_ML2_.jpg", link: "https://amzn.to/4kP7bZL", link2: "https://amzn.to/3ZQzT2T", editionNote: "Obra completa en dos volúmenes" },
+            // 11
+            { title: "Las cartas de Goldstein: La garantía para que los hijos de Israel se conviertan en hijos adoptivos de Cristo en su Iglesia", author: "David Goldstein", desc: "Mi Columna en el Boston Pilot, presentada aquí, contiene algunos de los artículos que tratan sobre principios...", size: "15x21", pages: 466, image: "https://m.media-amazon.com/images/I/51Lzn79K4PL._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/3MBcYpq", link2: "" },
+            // 12
+            { title: "La Iglesia, sus ritos y oficios", author: "P. James Meagher D.D.", desc: "Entre los objetos más impresionantes, notables y sublimes del mundo de hoy, se encuentran los Ritos...", size: "15x21", pages: 392, image: "https://m.media-amazon.com/images/I/51GVlBKD4xL._SY385_.jpg", link: "https://amzn.to/3NlKOz4", link2: "" },
+            // 13
+            { title: "C.S. Lewis, una aproximación", author: "Jorge N. Ferro", desc: "El cumplimiento de todos nuestros anhelos, la consumación de nuestras esperanzas, más allá de lo que podemos llegar siquiera a soñar...", size: "11x18", pages: 166, image: "https://m.media-amazon.com/images/I/61oNS25xgcL._SY466_.jpg", link: "https://amzn.to/4u3p0aG", link2: "" },
+            // 14
+            { title: "Mater Dolorosa, extracto de las Glorias a María", author: "San Alfonso María de Ligorio", desc: "Una obra entrañable de la tradición espiritual, este extracto de Las glorias de María...", size: "11x18", pages: 96, image: "https://m.media-amazon.com/images/I/61Bkypxf-mL._SY466_.jpg", link: "https://amzn.to/43CXzcS", link2: "" },
+            // 15
+            { title: "Tratado de la verdadera devoción a la Santísima Virgen", author: "San Luis María Grignion de Montfort", desc: "Un clásico de la espiritualidad cristiana, el Tratado de la verdadera devoción...", size: "11x18", pages: 218, image: "https://m.media-amazon.com/images/I/61L9wtE1WIL._SY466_.jpg", link: "https://amzn.to/4dUo2aK", link2: "" },
+            // 16
+            { title: "Cuaderno de notas personales. Pensamientos espirituales", author: "Santa Bernardita Soubirous", desc: "Basado en sus propios cuadernos y notas espirituales, este libro recoge la voz íntima de Bernadette Soubirous...", size: "11x18", pages: 72, image: "https://m.media-amazon.com/images/I/61kKNdWLPNL._SY522_.jpg", link: "https://amzn.to/3PQaDs3", link2: "" },
+            // 17
+            { title: "Efemérides: dramatización de fiestas religiosas y fiestas patrias", author: "Athanasius", desc: "Efemérides: Sucesos notables ocurridos en la fecha, pero en años anteriores...", size: "15x21", pages: 208, image: "https://m.media-amazon.com/images/I/71Eafe-rzIL._SY425_.jpg", link: "https://amzn.to/436TQ7h", link2: "" },
+            // 18
+            { title: "El Divino Ignorado", author: "Mons Maurice Landrieux", desc: "Mons. Landrieux ofrece en El Divino Ignorado una profunda meditación sobre la Persona y la acción del Espíritu Santo...", size: "15x21", pages: 130, image: "https://m.media-amazon.com/images/I/61PbzFtHM0L._SY425_.jpg", link: "https://amzn.to/3RRTNtv", link2: "" },
+            // 19
+            { title: "Principios de sanidad", author: "Jordán Alejandro Abud", desc: "¿Qué distingue una verdadera salud psíquica de un simple equilibrio aparente? ¿Puede la psicología comprender plenamente al hombre sin una base filosófica sólida?...", size: "15x21", pages: 320, image: "https://m.media-amazon.com/images/I/71vHVOYuvgL._SY385_.jpg", link: "https://amzn.to/4x47o1g", link2: "" },
+            // 20
+            { title: "El amor de la Sabiduría Eterna", author: "San Luis María Grignion de Montfort", desc: "Este libro presenta el contexto fundamental de los demás escritos de San Luis María Grignion de Montfort...", size: "11x18", pages: 178, image: "https://m.media-amazon.com/images/I/61IW+wzoiRL._SY522_.jpg", link: "https://amzn.to/4vflhb1", link2: "" },
+            // 21
+            { title: "La canción del cisne", author: "Fernando Zwanik", desc: "Escrita bajo la figura literaria de una crónica historiográfica, La Canción del Cisne cuenta la paciente maduración de un alma...", size: "15x21", pages: 400, image: "https://m.media-amazon.com/images/I/61OUB5zYPdL._SY425_.jpg", link: "https://amzn.to/4wXR16c", link2: "" },
+            // 22
+            { title: "El tesoro escondido de la Santa Misa", author: "San Leonardo de Porto Maurizio", desc: "¿Te admirarás acaso al oírme decir que la Santa Misa es una obra asombrosa?...", size: "11x18", pages: 122, image: "https://m.media-amazon.com/images/I/619E5gjabQL._SY466_.jpg", link: "https://amzn.to/4uIKJpA", link2: "" },
+            // 23
+            { title: "Mi libro para colorear rezando a la Virgen María", author: "Inés María de Elías Quadri", desc: "En Mi libro para colorear rezando a la Virgen María encontrarás una colección de imágenes, devociones y poesías...", size: "21x29", pages: 24, image: "https://m.media-amazon.com/images/I/71pVeK6wCYL._SY425_.jpg", link: "https://amzn.to/4dS4VOv", link2: "" },
+            // 24
+            { title: "Camperas: Bichos y personas", author: "P. Leonardo Castellani", desc: "Un libro no se debe hacer sino cuando uno ha concebido allá dentro un concepto vivo...", size: "15x21", pages: 250, image: "https://m.media-amazon.com/images/I/51GVlBKD4xL._SY385_.jpg", link: "https://amzn.to/433aOUc", link2: "" },
+            // 25
+            { title: "Su Majestad Dulcinea", author: "P. Leonardo Castellani", desc: "El que ha de venir vendrá y no tardará. Estamos defendiendo millares de hogares como el que fue nuestro...", size: "15x21", pages: 382, image: "https://m.media-amazon.com/images/I/61WA7KUEgmL._SY425_.jpg", link: "https://amzn.to/4wX27Z2", link2: "" },
+            // 26
+            { title: "Evangelio de la infancia espiritual", author: "Esteban Piat O.F.M.", desc: "Esta es una invitación íntima a vivir el Evangelio desde la sencillez y la confianza de Santa Teresita del Niño Jesús...", size: "15x21", pages: 210, image: "https://m.media-amazon.com/images/I/71HaIoQGf8L._SY425_.jpg", link: "https://amzn.to/4u1jBRe", link2: "" },
+            // 27
+            { title: "Justo Mercado", author: "Diego de Jesús", desc: "Avisar que esta novela es absolutamente ficticia puede parecer innecesario, pero no lo es...", size: "12x19", pages: 272, image: "https://m.media-amazon.com/images/I/71uaYNoFIWL._SY425_.jpg", link: "https://amzn.to/4fbMiHC", link2: "" },
+            // 28
+            { title: "Bloy & Claudel: Dos novelas", author: "Diego de Jesús", desc: "Hay autores que hacen bien con sus textos; que hace bien leerlos...", size: "15x22", pages: 126, image: "https://m.media-amazon.com/images/I/61Y+XsC8RoL._SY466_.jpg", link: "https://amzn.to/3Sa2nUx", link2: "" },
+            // 29
+            { title: "La Niña del calvero: El poder de las palabras", author: "Diego de Jesús", desc: "Una viajera querubínica. Una palabra puede matar y una palabra puede curar...", size: "12x19", pages: 116, image: "https://m.media-amazon.com/images/I/714Catf3xIL._SY522_.jpg", link: "https://amzn.to/4uOxWlp", link2: "" },
+            // 30
+            { title: "Glorias y virtudes de San José. Meditaciones para todo el mes de marzo y para todos los miércoles del año", author: "P. Jean Joseph Huguet S.M.", desc: "La misma devoción que inspiró a los fieles a consagrar un mes a honrar al Sagrado Corazón de Jesús...", size: "15x21", pages: 288, image: "https://m.media-amazon.com/images/I/71dv7nByp7L._SY385_.jpg", link: "https://amzn.to/4vBTzFN", link2: "" },
+            // 31
+            { title: "El príncipe de este mundo", author: "José León Pagano (h)", desc: "El príncipe de este mundo, de José León Pagano (h), es una novela que combina el género policial con una profunda dimensión esjatológica...", size: "15x21", pages: 380, image: "https://m.media-amazon.com/images/I/615yahdm1aL._SY385_.jpg", link: "https://amzn.to/4dCIbmP", link2: "" },
+            // 32 - La Búsqueda del Santo Grial (2 versiones)
+            { title: "La Búsqueda del Santo Grial", author: "Albert Pauphilet y Étienne Gilson", desc: "En la corte del rey Arturo, durante un banquete de Pentecostés celebrado alrededor de la Mesa Redonda, el Santo Grial aparece milagrosamente... Edición enriquecida con 28 miniaturas medievales. Incluye el estudio de Étienne Gilson: 'La mística de la gracia en la búsqueda del Santo Grial'.", size: "15.6x23.4", pages: 296, image: "https://m.media-amazon.com/images/I/41VyDgQpMnL._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/49xLWHA", link2: "https://amzn.to/4nzihnh", editionNote: "Disponible con ilustraciones a color y en blanco y negro" },
+            // 33
+            { title: "El Sueño de Helena", author: "Daniel Heredia", desc: "El Sueño de Helena, de Javier Daniel Heredia, es una novela que se inscribe en la tradición de las novelas anticipatorias...", size: "15x21", pages: 160, image: "https://m.media-amazon.com/images/I/61i42pLzB2L._SY385_.jpg", link: "https://amzn.to/49pBi5N", link2: "" }
         ];
 
-        // Función para renderizar los libros
-        function renderBooks(filter = '') {
-            const grid = document.getElementById('booksGrid');
+        /* 
+         * ============================================================
+         * PLAN B - Colección Infantil
+         * ============================================================
+         * PB1. La verdadera historia del Ratón Pérez
+         * PB2. Tom Playfair
+         * PB3. Percy Winn
+         * PB4. Henry Dy
+         */
+
+        const planBBooks = [
+            // PB1
+            { title: "La verdadera historia del Ratón Pérez", author: "P. Luis Coloma", desc: "La verdadera historia del Ratón Pérez es un libro infantil escrito por el padre Luis Coloma en 1894, como regalo de cumpleaños dedicado al Rey Alfonso XIII de España...", size: "14x20", pages: 46, image: "https://m.media-amazon.com/images/I/71E5iWqEkWL._SY385_.jpg", link: "https://amzn.to/3Qe1s4Z", link2: "" },
+            // PB2
+            { title: "Tom Playfair", author: "Francis Finn", desc: "Tom Playfair es inquieto, travieso y siempre dispuesto a vivir algo nuevo. Al ingresar a un internado, su espíritu libre choca con las normas y la disciplina...", size: "15x21", pages: 160, image: "https://m.media-amazon.com/images/I/71b+IZf0kNL._SY425_.jpg", link: "https://amzn.to/4u5wrhs", link2: "" },
+            // PB3
+            { title: "Percy Winn", author: "Francis Finn", desc: "Percy Wynn es un joven educado en casa, de modales impecables pero sin experiencia en el trato con otros muchachos...", size: "15x21", pages: 168, image: "https://m.media-amazon.com/images/I/51OUPezSRsL._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/4fPwZEI", link2: "" },
+            // PB4
+            { title: "Henry Dy", author: "Francis Finn", desc: "Henry Dy es inteligente y de buen corazón, pero su vida cambia radicalmente cuando se ve envuelto en misterios y situaciones que pondrán a prueba su carácter...", size: "15x21", pages: 196, image: "https://m.media-amazon.com/images/I/51rkbdRpW2L._SY445_SX342_FMwebp_.jpg", link: "https://amzn.to/49qw4XA", link2: "" }
+        ];
+
+        // Función para generar botones de compra
+        function generateBuyButtons(link, link2, editionNote) {
+            if (!link && !link2) return `<button class="buy-button" disabled>Próximamente</button>`;
+            
+            let buttons = '<div class="buy-buttons">';
+            if (link) buttons += `<a href="${link}" target="_blank" rel="noopener noreferrer" class="buy-button">Comprar en Amazon</a>`;
+            if (link2) buttons += `<a href="${link2}" target="_blank" rel="noopener noreferrer" class="buy-button secondary">Ver otra edición</a>`;
+            buttons += '</div>';
+            
+            if (editionNote) buttons += `<p class="edition-note">${editionNote}</p>`;
+            
+            return buttons;
+        }
+
+        // Función para renderizar libros
+        function renderBooks(booksArray, gridId, filter = '') {
+            const grid = document.getElementById(gridId);
             grid.innerHTML = '';
             
-            const filtered = books.filter(book => 
+            const filtered = booksArray.filter(book => 
                 book.title.toLowerCase().includes(filter.toLowerCase()) ||
                 book.author.toLowerCase().includes(filter.toLowerCase())
             );
@@ -920,60 +335,43 @@
                         <p class="book-desc">${book.desc}</p>
                         <div class="book-specs">
                             <span>📐 ${book.size}</span>
-                            <span>📄 ${book.pages} págs.</span>
+                            <span>📄 ${book.pages}</span>
                         </div>
-                        ${book.link ? 
-                            `<a href="${book.link}" target="_blank" rel="noopener noreferrer" class="buy-button">Comprar en Amazon</a>` : 
-                            `<button class="buy-button" disabled>Próximamente</button>`
-                        }
+                        ${generateBuyButtons(book.link, book.link2, book.editionNote)}
                     </div>
                 `;
                 grid.appendChild(card);
             });
         }
 
-        // Función de búsqueda
+        // Función de búsqueda (filtra ambas secciones)
         function filterBooks() {
             const query = document.getElementById('searchInput').value;
-            renderBooks(query);
+            renderBooks(books, 'booksGrid', query);
+            renderBooks(planBBooks, 'planBGrid', query);
         }
 
         // Búsqueda en tiempo real
         document.getElementById('searchInput').addEventListener('input', (e) => {
-            renderBooks(e.target.value);
+            filterBooks();
         });
 
         // Menú móvil
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
-        
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-        
-        // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
+        menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+        document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('active')));
         
         // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }));
         
         // Inicializar
-        renderBooks();
+        renderBooks(books, 'booksGrid');
+        renderBooks(planBBooks, 'planBGrid');
     </script>
 </body>
 </html>
